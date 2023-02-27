@@ -4,6 +4,7 @@ import initialize_background_workers from './background_workers'
 import config from './config'
 import tasks from './tasks'
 import Sentry from './config/sentry'
+import logger from './config/logger'
 
 const main = async (): Promise<void> => {
   await initialize_data_base()
@@ -27,5 +28,6 @@ const main = async (): Promise<void> => {
 }
 
 main().catch((e) => {
+  logger.error(e)
   Sentry.captureException(e)
 })
