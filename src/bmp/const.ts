@@ -16,7 +16,7 @@ const stagingSigns = [
   '// (.)(_) bmp test'
 ]
 
-const signsForProd = configuration.cluster === 'prod' || configuration.cluster === 'prod2'
+//const signsForProd = configuration.cluster === 'prod' || configuration.cluster === 'prod2'
 
 export const DEFAULT_TAGS = ['blockchain', 'memes']
-export const BMP_SIGNS = signsForProd ? prodSigns : stagingSigns
+export const BMP_SIGNS = prodSigns
