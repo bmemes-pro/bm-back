@@ -1,0 +1,6 @@
+node_modules
+build
+tmp
+.env.staging
+.env.production
+k8s/configmap-*

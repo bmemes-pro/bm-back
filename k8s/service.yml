@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: backend
+  namespace: default
+spec:
+  ports:
+    - protocol: TCP
+      port: 3001
+      targetPort: 3001
+  selector:
+    k8s-app: backend
+  type: ClusterIP

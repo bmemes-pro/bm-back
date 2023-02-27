@@ -1,0 +1,18 @@
+version: '3.7'
+services:
+  postgres:
+    image: postgres:12
+    volumes:
+      - ./tmp/pgdata:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - "5432:5432"
+  redis:
+    image: bitnami/redis
+    ports:
+      - "6379:6379"
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+             
