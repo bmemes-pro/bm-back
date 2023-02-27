@@ -2,6 +2,7 @@ import { DataSource } from 'typeorm'
 import options from './data_source_options'
 import { createDatabase } from 'typeorm-extension'
 import logger from '../config/logger'
+import initDBData from './init_db_data'
 
 export const dataSource = new DataSource(options)
 
@@ -26,8 +27,8 @@ const initialize = async (): Promise<void> => {
       logger.info('creating database...')
 
       await createDatabase({ options })
-
       await initialize()
+      await initDBData(dataSource)
 
       return
     }
