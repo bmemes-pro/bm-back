@@ -24,7 +24,7 @@ export const getTransactions = async (address: string): Promise<any[]> => {
   const params = {
     address,
     archival: true,
-    limit: 15
+    limit: 30
   }
   const response = await axios.get(path, { headers, params })
 
