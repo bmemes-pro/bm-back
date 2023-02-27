@@ -12,3 +12,14 @@ docker-compose up
 npm i
 npm start
 ```
+
+## How to make sure the project is running
+You can view info page:
+```bash
+curl localhost:3001/api/info
+```
+Or get list of posts:
+```bash
+curl localhost:3001/api/posts
+```
+For UI you can install frontend part of the project. [Follow the link](https://github.com/bmemes-pro/bm-front)
