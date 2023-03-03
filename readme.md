@@ -26,12 +26,12 @@ curl localhost:3001/api/info
 ```
 Or get list of posts:
 ```bash
-curl localhost:3001/api/posts?option=new
+curl localhost:3001/api/posts
 ```
 Posts  will be available in 30s after project launch.
 
 For UI you can install frontend part of the project. [Follow the link](https://github.com/bmemes-pro/bm-front)
 
 ## Donation
-Donations are accepted at this address
+Donations are accepted at this TON address
 > EQDtMzVHgMiPH6boZoh6QFRkkJjASy5GbvfJzhJAoYEaQ6m_
